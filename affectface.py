@@ -39,7 +39,7 @@ n_expression=5
 net = EmoNet(n_expression=n_expression).to()
 
 # Carregando o modelo do arquivo PTH
-state_dict_path = Path(__file__).parent.joinpath('.', f'emonet_{n_expression}.pth')
+state_dict_path = Path(__file__).parent.joinpath('.', f'emonet_{n_expression}.pth') #Emonet 5 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_5.pth Emonet 8 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_8.pth
 
 print(f'Carregando o modelo de {state_dict_path}.')
 
