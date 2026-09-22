@@ -25,9 +25,9 @@ Emonet 8 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/mas
 
 sudo mysql
 
-CREATE USER 'ana'@'localhost' IDENTIFIED BY '123';
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY '123';
 
-GRANT ALL PRIVILEGES ON . TO 'ana'@'localhost';
+GRANT ALL PRIVILEGES ON . TO 'usuario'@'localhost';
 
 FLUSH PRIVILEGES;
 
