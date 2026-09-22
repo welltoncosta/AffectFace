@@ -1,4 +1,4 @@
-Este é o AffectFace, um programa em Python que utiliza os modelos de 5 emoções e 7 emoções e o Valence e Arousal do EmoNet.
+Este é o AffectFace, um programa em Python que utiliza os modelos de 5 emoções ou 8 emoções e o Valence e Arousal do EmoNet.
 
 Para funcionar, você precisa:
 
