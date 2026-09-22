@@ -8,12 +8,14 @@ Para funcionar, você precisa:
 2) clone este repositório usando: git clone https://github.com/welltoncosta/AffectFace
    
 3) Baixe esses dois arquivos e cole dentro da pasta emonet:
+4) 
 Emonet 5 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_5.pth
+
 Emonet 8 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_8.pth
   
-4) Baixe o modelo de reconhecimento de landmarks (pontos de controle) e coloque na mesma pasta de affectface.py:  http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+5) Baixe o modelo de reconhecimento de landmarks (pontos de controle) e coloque na mesma pasta de affectface.py:  http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
-5) precisa instalar estes pacotes do python
+6) precisa instalar estes pacotes do python
 
   pip3 install imutils torch torchvision "opencv-python==4.10.0.84" mariadb --break-system-packages
 
