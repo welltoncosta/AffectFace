@@ -16,10 +16,8 @@ from torchvision import transforms
 
 from emonet.models import EmoNet
 
-
 import mariadb
 import sys
-
 
 #### MUITO IMPORTANTE MUDAR PARA CADA USUARIO #####
 id_usuario=1;
@@ -35,10 +33,8 @@ conn = mariadb.connect(
 print(conn)
 cur = conn.cursor()
 
-
 # Usar número de experssão 5 ou 8?
-n_expression=8
-
+n_expression=5
 
 net = EmoNet(n_expression=n_expression).to()
 
@@ -160,10 +156,10 @@ while cv2.getWindowProperty('Video', 0) >= 0:
             print("expressao = ", expression_pred, "\n\n")
 
             valence = float(valence_pred)
-            arousal =float(arousal_pred)
+            arousal = float(arousal_pred)
 
-            sql = "INSERT INTO face_experimento (id_usuario, valence, arousal, horario) VALUES (%s, %s, %s, NOW())";
-            val = (id_usuario, valence, arousal)
+            sql = "INSERT INTO face_experimento (id_usuario, expressao, valence, arousal, horario) VALUES (%s, %s, %s, %s, NOW())";
+            val = (id_usuario, expression_pred, valence, arousal)
             cur.execute(sql, val);
 
             print("inserido")
