@@ -20,12 +20,15 @@ Para funcionar, você precisa:
 sudo mysql
 
 CREATE USER 'ana'@'localhost' IDENTIFIED BY '123';
+
 GRANT ALL PRIVILEGES ON . TO 'ana'@'localhost';
+
 FLUSH PRIVILEGES;
 
 5.2) Crie o banco e a tabela
 
 CREATE DATABASE doutorado;
+
 USE doutorado;
 
 CREATE TABLE face_experimnto (
