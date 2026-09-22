@@ -6,16 +6,20 @@ Para funcionar, você precisa:
    sudo apt install git gcc mariadb-server libmariadb-dev cmake python3 python3-pip libopencv-dev python3-opencv
 
 2) clone este repositório usando: git clone https://github.com/welltoncosta/AffectFace
+   
+3) Baixe esses dois arquivos e cole dentro da pasta emonet:
+Emonet 5 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_5.pth
+Emonet 8 expressões: https://github.com/face-analysis/emonet/raw/refs/heads/master/pretrained/emonet_8.pth
   
-3) Baixe o modelo de reconhecimento de landmarks (pontos de controle) e coloque na mesma pasta de affectface.py:  http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+4) Baixe o modelo de reconhecimento de landmarks (pontos de controle) e coloque na mesma pasta de affectface.py:  http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
-4) precisa instalar estes pacotes do python
+5) precisa instalar estes pacotes do python
 
   pip3 install imutils torch torchvision "opencv-python==4.10.0.84" mariadb --break-system-packages
 
-5) Armazenamento. MariaDB/MySQL
+6) Armazenamento. MariaDB/MySQL
 
-5.1) Crie um usuario com permissão de admin no MariaDB:
+6.1) Crie um usuario com permissão de admin no MariaDB:
 
 sudo mysql
 
@@ -25,7 +29,7 @@ GRANT ALL PRIVILEGES ON . TO 'ana'@'localhost';
 
 FLUSH PRIVILEGES;
 
-5.2) Crie o banco e a tabela
+6.2) Crie o banco e a tabela
 
 CREATE DATABASE doutorado;
 
@@ -40,13 +44,13 @@ CREATE TABLE face_experimnto (
 );
 
 
-6) Para executar faça:
+7) Para executar faça:
 
-6.1) Abra o arquivo affectface.py e ajuste as configurações para seu banco de dados (usuário e senha) que você criou
+8.1) Abra o arquivo affectface.py e ajuste as configurações para seu banco de dados (usuário e senha) que você criou
 
-6.2) certifique-se que a webcam está funcionando (abra o cheese por exemplo e veja se está ok)
+8.2) certifique-se que a webcam está funcionando (abra o cheese por exemplo e veja se está ok)
 
-6.3) abra o terminal e faça: python3 affectface.py
+8.3) abra o terminal e faça: python3 affectface.py
 
 qualquer dúvida, mande um email para wcoliveira@utfpr.edu.br
 
